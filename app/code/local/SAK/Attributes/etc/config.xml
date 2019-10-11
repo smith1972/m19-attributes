@@ -5,4 +5,13 @@
             <version>0.1.0</version>
         </SAK_Attributes>
     </modules>
+    <frontend>
+        <layout>
+            <updates>
+                <sak_attributes>
+                    <file>sak/attributes.xml</file>
+                </sak_attributes>
+            </updates>
+        </layout>
+    </frontend>
 </config>
