@@ -1,0 +1,8 @@
+<?xml version="1.0"?>
+<config>
+    <modules>
+        <SAK_Attributes>
+            <version>0.1.0</version>
+        </SAK_Attributes>
+    </modules>
+</config>
