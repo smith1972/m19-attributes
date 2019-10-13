@@ -10,7 +10,7 @@ $installer->addAttribute('catalog_product', 'city_of_manufacture', array(
     'input'           => 'text',
     'type'            => 'varchar',
     'required'        => 0,
-    'visible_on_front'=> 1,
+    'visible_on_front'=> 0,
     'filterable'      => 0,
     'searchable'      => 0,
     'comparable'      => 0,
@@ -26,7 +26,7 @@ $installer->addAttribute('catalog_product', 'dimentions', array(
     'input'           => 'text',
     'type'            => 'varchar',
     'required'        => 0,
-    'visible_on_front'=> 1,
+    'visible_on_front'=> 0,
     'filterable'      => 0,
     'searchable'      => 0,
     'comparable'      => 0,
@@ -40,9 +40,9 @@ $installer->addAttribute('catalog_product', 'volume', array(
     'group'           => 'General',
     'label'           => 'Volume',
     'input'           => 'text',
-    'type'            => 'integer',
+    'type'            => 'int',
     'required'        => 0,
-    'visible_on_front'=> 1,
+    'visible_on_front'=> 0,
     'filterable'      => 0,
     'searchable'      => 0,
     'comparable'      => 0,
@@ -51,5 +51,4 @@ $installer->addAttribute('catalog_product', 'volume', array(
     'global'          => Mage_Catalog_Model_Resource_Eav_Attribute::SCOPE_GLOBAL,
     'note'            => '',
 ));
-
 $installer->endSetup();

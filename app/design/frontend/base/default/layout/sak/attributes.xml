@@ -1,11 +1,19 @@
 <?xml version="1.0"?>
 <layout>
-<!--    <catalog_product_view>
+
+    <catalog_product_view>
         <reference name="product.info.sharing">
             <action method="setTemplate">
-                <template>catalog/product/view/test.phtml</template>
+                <template>catalog/product/view/sak/attributes.phtml</template>
             </action>
         </reference>
+
+        <reference name="product.info">
+            <block type="sak_attributes/product_attributes" name="product.info.attributes" as="product_attributes" template="catalog/product/view/sak/attributes.phtml">
+                <action method="addToParentGroup"><group>detailed_info</group></action>
+            </block>
+        </reference>
+
     </catalog_product_view>
-    -->
+
 </layout>
