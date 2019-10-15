@@ -1,2 +1,35 @@
 <?php
-echo '<div style="color: yellow">ATTRIBUTES</div>';
+
+$product = $this->getProduct();
+if (!($product instanceof Mage_Catalog_Model_Product)) return;
+$data = [
+    'city_of_manufacture' => ['title' => 'City of manefacture', 'val' => ''],
+    'dimentions' => ['title' => 'Dimentions', 'val' => ''],
+    'volume' => ['title' => 'Volume', 'val' => '']
+];
+foreach ($data as $k => $v)
+{
+    $val = $product->getData($k);
+    if (empty($val))
+    {
+        unset($data[$k]);
+    }else{
+        $data[$k]['val'] = $val;
+    }
+}
+if (empty($data)) return;
+
+echo '<div id="sak_attributes" style="display: none;"><table>';
+foreach ($data as $v)
+{
+    echo "<tr><td>{$v['title']}</td><td>&nbsp;&nbsp;&nbsp;</td><td>{$v['val']}</td></tr>";
+}
+echo '</table></div>';
+
+?>
+
+<script>
+    $j(document).ready(function () {
+        $j('.product-shop .product-name').append($j('#sak_attributes').detach().show());
+    })
+</script>
